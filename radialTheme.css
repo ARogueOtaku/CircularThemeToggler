@@ -1,0 +1,82 @@
+.toggle-switch {
+  position: fixed;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.radial-top {
+  top: 0;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.radial-topright {
+  top: 0;
+  right: 0;
+}
+
+.radial-right {
+  top: 50vh;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.radial-bottomright {
+  bottom: 0;
+  right: 0;
+}
+
+.radial-bottom {
+  bottom: 0;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.radial-bottomleft {
+  bottom: 0;
+  left: 0;
+}
+
+.radial-left {
+  top: 50vh;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.radial-topleft {
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --o-top: 0px;
+  --o-left: 0px;
+  --o-anim-duration: 1s;
+  --o-anim-duration-half: 0.5s;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.theme-overlay {
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  top: var(--o-top);
+  background-color: black;
+  left: var(--o-left);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: invert(1);
+  transition: width var(--o-anim-duration-half) ease-out, height var(--o-anim-duration-half) ease-out;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.overlay-expanded {
+  width: max(400vw, 400vh);
+  height: max(400vw, 400vh);
+  transition: width var(--o-anim-duration), height var(--o-anim-duration);
+}
