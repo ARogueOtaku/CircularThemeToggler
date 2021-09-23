@@ -1,7 +1,5 @@
 ## Usage
 
----
-
 **Include Radial Theme JS and CSS as follows**
 
 ```html
@@ -40,8 +38,8 @@ const testToggle = document.getElementById("test-toggle");
 initTheme(testToggle);
 ```
 
-## Demo
-
 ---
+
+## Demo
 
 **Find a Working Demo [Here](https://arogueotaku.github.io/CircularThemeToggler)**
